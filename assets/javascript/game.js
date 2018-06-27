@@ -60,10 +60,12 @@ document.onkeyup = function (event) {
         // Clear usedGuesses, clear the correct flag, reset remaining guesses and update the screen
         usedGuesses = [];
         remainingGuesses = 9;
+        isCorrect = false;
         displayWC.textContent = winCount;
         displayLC.textContent = lossCount;
         displayRGC.textContent = remainingGuesses;
         displayUG.textContent = "";
+        
         // get a new computer guess
         computerGuess = alphabetArray[Math.floor(Math.random() * alphabetArray.length)];
         console.log("Computer Guess:" + computerGuess);
